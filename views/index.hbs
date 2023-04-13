@@ -11,10 +11,61 @@
   <script src="https://kit.fontawesome.com/d7fc6ade47.js" crossorigin="anonymous"></script>
   <title>WELCOME PAGE</title>
 </head>
+ {{>navbar}}
 <body>
-  {{>navbar}}
+
+<section class="header">
+<div class="side-menu" id="side-menu">
+ <ul>
+  <li>ON SALE<i class="fa fa-angle-right"></i></li>
+  <li>TOPS<i class="fa fa-angle-right"></i>
+   <ul>
+    <li>JACKETS</li>
+    <li>LONG COATS</li>
+    <li>HOODIES</li>
+    <li>SHIRTS</li>
+    <li>T-SHIRTS</li>
+  </ul>
+  </li>
+  <li>BOTTOMS<i class="fa fa-angle-right"></i>
+   <ul>
+    <li>JEANS</li>
+    <li>CHINOS</li>
+    <li>TROUSERS</li>
+    <li>SHORTS</li>
+  </ul>
+  </li>
+   <li>ACCESSORIES<i class="fa fa-angle-right"></i>
+   <ul>
+    <li>JEWELLERIES</li>
+    <li>WATCHES</li>
+    <li>UNDERGARMENTS</li>
+    <li>WALLETS</li>
+  </ul>
+  </li>
+     <li>PERFUMES<i class="fa fa-angle-right"></i></li>
+ </ul> 
+</div>  
+</section>
+
+
   
 <!-- JS popper -->
+  <script>
+    function openmenu()
+    {
+      document.getElementById("side-menu").style.display="block";
+      document.getElementById("menu-btn").style.display="none";
+      document.getElementById("close-btn").style.display="block";
+    }
+    function closemenu()
+    {
+      document.getElementById("side-menu").style.display="none";
+      document.getElementById("menu-btn").style.display="block";
+      document.getElementById("close-btn").style.display="none";
+    }
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
 </body>
