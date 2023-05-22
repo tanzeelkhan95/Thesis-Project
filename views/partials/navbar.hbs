@@ -2,7 +2,7 @@
   <div class="search-box">
     <i class="fa fa-bars" id="menu-btn" onclick="openmenu()"></i>
     <i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
-     <img src="/static/images/logo.png" class="logo">
+     <img src={{data.brandIconUrl}} class="logo">
      <input type="text" class="form-control">
      <span class="input-group-text">
       <i class="fa fa-search" aria-hidden="true"></i>
@@ -10,9 +10,11 @@
   </div>
   <div class="menu-bar">
      <ul>
-      <li><a href="#"><i class="fa fa-shopping-basket"></i>CART</a></li>
-      <li><a href="#">SIGN UP</a></li>
-      <li><a href="#">LOGIN</a></li>
+      {{#each data.links}}
+      <li><a href={{this.url}}>{{this.label}}</a></li>
+      {{/each}}
      </ul>
+     <!-- Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/d7fc6ade47.js" crossorigin="anonymous"></script>
   </div>
 </div>

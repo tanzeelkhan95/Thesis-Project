@@ -3,6 +3,7 @@ const hbs = require("hbs")
 const app = express()
 const mongoose = require("mongoose")
 const Product = require("./models/Product")
+const Detail = require("./models/Detail")
 
 const routes = require('./routes/main')
 
@@ -18,12 +19,27 @@ hbs.registerPartials("views/partials")
 //db connections
 mongoose.connect("mongodb://localhost/thesis_project",()=>{
     console.log("db connected")
-    Product.create({
-        productName: "WHITE T-SHIRT",
-        imageName: "PRODUCT 2.jpeg",
-        price: "$15.00",
-        category: "TOP",
-    })
+    // Detail.create({
+    //     brandIconUrl:"/static/images/logo.png",
+    //     links:[
+    //         {
+    //             label:"Home",
+    //             url:"/index"
+    //         },
+    //         {
+    //             label:"Product",
+    //             url:"/product"
+    //         },
+    //         {
+    //             label:"Cart",
+    //             url:"/cart"
+    //         },
+    //         {
+    //             label:"Login",
+    //             url:"/login"
+    //         }
+    //     ]
+    // })
 })
 
 app.listen(process.env.PORT | 5556,()=>{
