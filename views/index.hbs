@@ -120,9 +120,11 @@
       <h2>NEW ARRIVALS</h2>
     </div>
     <div class="row">
+      {{#each products}}
+      {{#if this.newcheck}}
       <div class="col-md-3">
         <div class="product-top">
-          <img src="/static/images/PRODUCT 5.jpg">
+          <img src="{{this.imageName}}">
           <div class="overlay-right">
             <button type="button" class="btn btn-secondary" title="QUICK SHOP">
               <i class="fa fa-eye"></i>
@@ -141,192 +143,12 @@
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
             <i class="fa fa-star-half-o"></i>
-            <h3>CHARCOAL LONG-COAT</h3>
-            <h5>$150.00</h5>
+            <h3>{{this.productName}}</h3>
+            <h5>{{this.price}}</h5>
         </div>
       </div>
-
-      <div class="col-md-3">
-        <div class="product-top">
-          <img src="/static/images/PRODUCT 6.jpg">
-          <div class="overlay-right">
-            <button type="button" class="btn btn-secondary" title="QUICK SHOP">
-              <i class="fa fa-eye"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" title="ADD TO WISHLIST">
-              <i class="fa fa-heart-o"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" title="ADD TO CART">
-              <i class="fa fa-shopping-cart"></i>
-            </button>
-          </div>
-        </div>
-        <div class="product-bottom text-center">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h3>CAMEL LONG-COAT</h3>
-            <h5>$180.00</h5>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="product-top">
-          <img src="/static/images/PRODUCT 7.jpeg">
-          <div class="overlay-right">
-            <button type="button" class="btn btn-secondary" title="QUICK SHOP">
-              <i class="fa fa-eye"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" title="ADD TO WISHLIST">
-              <i class="fa fa-heart-o"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" title="ADD TO CART">
-              <i class="fa fa-shopping-cart"></i>
-            </button>
-          </div>
-        </div>
-        <div class="product-bottom text-center">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h3>BLACK BIKER JACKET</h3>
-            <h5>$200.00</h5>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="product-top">
-          <img src="/static/images/PRODUCT 8.jpeg">
-          <div class="overlay-right">
-            <button type="button" class="btn btn-secondary" title="QUICK SHOP">
-              <i class="fa fa-eye"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" title="ADD TO WISHLIST">
-              <i class="fa fa-heart-o"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" title="ADD TO CART">
-              <i class="fa fa-shopping-cart"></i>
-            </button>
-          </div>
-        </div>
-        <div class="product-bottom text-center">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-            <h3>BLACK TURTLE NECK</h3>
-            <h5>$80.00</h5>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="product-top">
-          <img src="/static/images/PRODUCT 9.jpg">
-          <div class="overlay-right">
-            <button type="button" class="btn btn-secondary" title="QUICK SHOP">
-              <i class="fa fa-eye"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" title="ADD TO WISHLIST">
-              <i class="fa fa-heart-o"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" title="ADD TO CART">
-              <i class="fa fa-shopping-cart"></i>
-            </button>
-          </div>
-        </div>
-        <div class="product-bottom text-center">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-            <i class="fa fa-star-o"></i>
-            <h3>DARK BLUE JEANS</h3>
-            <h5>$50.00</h5>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="product-top">
-          <img src="/static/images/PRODUCT 10.jpeg">
-          <div class="overlay-right">
-            <button type="button" class="btn btn-secondary" title="QUICK SHOP">
-              <i class="fa fa-eye"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" title="ADD TO WISHLIST">
-              <i class="fa fa-heart-o"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" title="ADD TO CART">
-              <i class="fa fa-shopping-cart"></i>
-            </button>
-          </div>
-        </div>
-        <div class="product-bottom text-center">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-            <i class="fa fa-star-o"></i>
-            <h3>KHAKI CHINOS</h3>
-            <h5>$60.00</h5>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="product-top">
-          <img src="/static/images/PRODUCT 11.jpg">
-          <div class="overlay-right">
-            <button type="button" class="btn btn-secondary" title="QUICK SHOP">
-              <i class="fa fa-eye"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" title="ADD TO WISHLIST">
-              <i class="fa fa-heart-o"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" title="ADD TO CART">
-              <i class="fa fa-shopping-cart"></i>
-            </button>
-          </div>
-        </div>
-        <div class="product-bottom text-center">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h3>WHITE FORMAL SHIRT</h3>
-            <h5>$100.00</h5>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="product-top">
-          <img src="/static/images/PRODUCT 12.jpg">
-          <div class="overlay-right">
-            <button type="button" class="btn btn-secondary" title="QUICK SHOP">
-              <i class="fa fa-eye"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" title="ADD TO WISHLIST">
-              <i class="fa fa-heart-o"></i>
-            </button>
-            <button type="button" class="btn btn-secondary" title="ADD TO CART">
-              <i class="fa fa-shopping-cart"></i>
-            </button>
-          </div>
-        </div>
-        <div class="product-bottom text-center">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-            <h3>GREY FORMAL SHIRT</h3>
-            <h5>$70.00</h5>
-        </div>
-      </div>
+      {{/if}}
+      {{/each}}
     </div>
   </div>
 </section>
