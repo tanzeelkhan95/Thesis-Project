@@ -115,6 +115,10 @@ body
 
 /*-------------------SIDE MENU-----------------------*/
 
+.slider-image
+{
+    object-fit: cover;
+}
 .side-menu
 {
     height: 79%;
