@@ -5,6 +5,8 @@ const Product = mongoose.Schema({
     imageName:String,
     price:String,
     category:String,
+    salecheck:Boolean, //check if the product is on sale
+    newcheck:Boolean,  //check if the product is of new arrival
 });
 
 module.exports=mongoose.model("products", Product)
