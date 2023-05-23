@@ -5,6 +5,8 @@ const mongoose = require("mongoose")
 const Product = require("./models/Product")
 const Detail = require("./models/Detail")
 const Slider = require("./models/Slider")
+const FeatureBox = require("./models/FeatureBox")
+const FeaturedCategories = require('./models/FeaturedCategories')
 
 const routes = require('./routes/main')
 
@@ -20,6 +22,45 @@ hbs.registerPartials("views/partials")
 //db connections
 mongoose.connect("mongodb://localhost/thesis_project",()=>{
     console.log("db connected")
+
+    /*----------------- FEATURED CATEGORIES SCHEMA ----------------------- */
+
+    // FeaturedCategories.create([
+    //     {
+    //         imageUrl: "/static/images/FEATURED 1.jpg"
+    //     },
+    //     {
+    //         imageUrl: "/static/images/FEATURED 2.jpg"
+    //     },
+    //     {
+    //         imageUrl: "/static/images/FEATURED 3.jpg"
+    //     },
+    // ])
+    
+    /*---------------- FEATURE BOX SCHEMA -------------*/
+
+    // FeatureBox.create([
+    //     {
+    //         imageUrl:"/static/images/FEATURE 1.png",
+    //         bold:"100% ORIGINAL ITEMS",
+    //         para:"ARE AVAILABLE",
+    //     },
+    //     {
+    //         imageUrl:"/static/images/FEATURE 2.png",
+    //         bold:"RETURN WITH 7 DAYS",
+    //         para:"OF RECIEVING YOUR ORDER",
+    //     },
+    //     {
+    //         imageUrl:"/static/images/FEATURE 3.png",
+    //         bold:"GET FREE DELIVERY",
+    //         para:"ON ORDER WORTH $80",
+    //     },
+    //     {
+    //         imageUrl:"/static/images/FEATURE 4.png",
+    //         bold:"PAY ONLINE",
+    //         para:"THROUGH MULTIPLE PAYMENT OPTION",
+    //     }
+    // ])
 
     /*------------------  CREATE SLIDER SCHEMA ----------------------- */
 
