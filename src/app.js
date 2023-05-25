@@ -7,8 +7,11 @@ const Detail = require("./models/Detail")
 const Slider = require("./models/Slider")
 const FeatureBox = require("./models/FeatureBox")
 const FeaturedCategories = require('./models/FeaturedCategories')
+const Register = require("./models/User")
 
 const routes = require('./routes/main')
+app.use(express.json())
+app.use(express.urlencoded({ extended:false }))
 
 app.use('/static', express.static("public"))
 app.use('',routes)

@@ -14,7 +14,7 @@
     background-size: cover;
     background-position: center;
 }
-.login
+.user-login
 {
     width: 360px;
     height: min-content;
@@ -30,7 +30,7 @@
     border-radius: 12px;
     background: #ffffff;
 }
-.login h1
+.user-login h1
 {
     font-size: 36px;
     margin-bottom: 25px;
@@ -40,15 +40,15 @@
 {
     color: #AA0000;
 }
-.login form
+.user-login form
 {
     font-size: 20px;
 }
-.login form .form-group
+.user-login form .form-group
 {
     margin-bottom: 12px;
 }
-.login form input[type="submit"]{
+.user-login form input[type="submit"]{
     font-size: 20px;
     margin-top: 15px;
 }

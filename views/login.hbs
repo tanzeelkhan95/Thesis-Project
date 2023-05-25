@@ -10,62 +10,62 @@
     <script src="https://kit.fontawesome.com/d7fc6ade47.js" crossorigin="anonymous"></script>
         <title>LOGIN PAGE</title>
       </head>
-      <body class="body-login">
-            <div class="login">
-                <h1 class="text-center">LOGIN</h1>
-                <form class="needs-validation">
+        <body class="body-login">
+          <div class="user-login">
+            <h1 class="text-center">LOGIN</h1>
+              <form class="needs-validation">
+                  <div class="form-group">
+                      <label class="form-label" for="email">EMAIL ADDRESS</label>
+                      <input class="form-control" name="email" type="email" id="email">
+                  </div>
+                  <div class="form-group">
+                      <label class="form-label" for="password">PASSWORD</label>
+                      <input class="form-control" name="password" type="password" id="password">
+                  </div>
+                  <div class="form-group form-check">
+                      <input class="form-check-input" type="checkbox" id="check">
+                      <label class="form-check-label" for="check">REMEMBER ME</label>
+                  </div>
+                  <input class="btn btn-danger w-100" type="submit" value="SIGN IN">
+              </form>
+              <div class="register-link text-center">
+                 <p>Don't have an account? <a href="#" id="registerLink">Register</a></p>
+              </div>
+        </div>
+        <div class="register" style="display: none;">
+            <h1 class="text-center rh1">REGISTER</h1>
+            <form action="/register" method="post" id="registerForm">
+                    <div class="form-group">
+                        <label class="form-label" for="username">USERNAME</label>
+                        <input class="form-control" name="username" type="text" id="username">
+                    </div>
                     <div class="form-group">
                         <label class="form-label" for="email">EMAIL ADDRESS</label>
-                        <input class="form-control" type="email" id="email">
+                        <input class="form-control" name="email" type="email" id="email">
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="password">PASSWORD</label>
-                        <input class="form-control" type="password" id="password">
+                        <input class="form-control" name="password" type="password" id="password">
                     </div>
-                    <div class="form-group form-check">
-                        <input class="form-check-input" type="checkbox" id="check">
-                        <label class="form-check-label" for="check">REMEMBER ME</label>
-                    </div>
-                    <input class="btn btn-danger w-100" type="submit" value="SIGN IN">
-                </form>
-                <div class="register-link text-center">
-        <p>Don't have an account? <a href="#" id="registerLink" onclick="switchToRegister()">Register</a></p>
-    </div>
-    </div>
-    <div class="register" style="display: none;">
-    <h1 class="text-center rh1">REGISTER</h1>
-    <form id="registerForm">
-            <div class="form-group">
-            <label class="form-label" for="username">USERNAME</label>
-            <input class="form-control" type="text" id="username">
+                    <input class="btn btn-danger w-100" type="submit" value="REGISTER">
+                    <div class="form-group text-center">
+                         <p>Already have an account? <a href="#" id="loginLink">Login</a></p>
+                            </div>
+              </form>
+            <div class="message" style="display: none;">
+                <p>User created successfully!</p>
+                <button id="returnToLogin" class="btn btn-danger">Return to Login</button>
             </div>
-            <div class="form-group">
-            <label class="form-label" for="email">EMAIL ADDRESS</label>
-            <input class="form-control" type="email" id="email">
-            </div>
-            <div class="form-group">
-            <label class="form-label" for="password">PASSWORD</label>
-            <input class="form-control" type="password" id="password">
-            </div>
-            <input class="btn btn-danger w-100" type="submit" value="REGISTER">
-            <div class="form-group text-center">
-            <p>Already have an account? <a href="#" id="loginLink">Login</a></p>
-            </div>
-    </form>
-    <div class="message" style="display: none;">
-        <p>User created successfully!</p>
-        <button id="returnToLogin" class="btn btn-primary">Return to Login</button>
-    </div>
-    </div>
+        </div>
     <!-- Bootstrap JS -->
 
  <script>
-  const loginForm = document.querySelector('.login');
+  const loginForm = document.querySelector('.user-login');
   const registerForm = document.querySelector('.register');
   const registerLink = document.getElementById('registerLink');
   const loginLink = document.getElementById('loginLink')
   const returnToLoginButton = document.getElementById('returnToLogin');
-  const message = document.querySelector('.invalid-feedback');
+  const message = document.querySelector('.message');
 
   registerLink.addEventListener('click', () => {
     loginForm.style.display = 'none';
@@ -76,7 +76,7 @@
   loginLink.addEventListener('click', () => {
     loginForm.style.display = 'block';
     registerForm.style.display = 'none';
-    message.style.display = 'none';
+    {{!-- message.style.display = 'none'; --}}
   })
 
   returnToLoginButton.addEventListener('click', () => {
@@ -86,14 +86,14 @@
     document.querySelector('.message').style.display = 'none';
   });
 
-  // Handle registration form submission
+  {{!-- // Handle registration form submission
   const registrationForm = document.getElementById('registerForm');
   registrationForm.addEventListener('submit', (e) => {
     e.preventDefault();
     // Perform registration logic and display success message
     document.getElementById('registerForm').reset();
     document.querySelector('.message').style.display = 'block';
-  });
+  }); --}}
 </script>
 
 

@@ -1,12 +1,13 @@
 const express = require('express')
 
-const { route } = require('express/lib/application')
+const { route, render } = require('express/lib/application')
 
 const Detail = require("../models/Detail")
 const Slider = require('../models/Slider')
 const Product = require('../models/Product')
 const FeatureBox = require('../models/FeatureBox')
 const FeaturedCategories = require('../models/FeaturedCategories')
+const Register = require('../models/User')
 
 const routes = express.Router()
 
@@ -46,5 +47,19 @@ routes.get('/login', async(req,res)=>{
         details:details
     })
 })
+routes.post('/register', async (req, res) => {
+    try {
+      const registerUser = new Register({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password,
+      });
+      const registered = await registerUser.save();
+      res.status(201).render("login")
+    } catch (error) {
+        console.error('Error registering user:', error); // Log the error to the console for debugging purposes
+        res.status(500).send(`Error registering user: ${error.message}`);
+    }
+  });
 
 module.exports = routes
