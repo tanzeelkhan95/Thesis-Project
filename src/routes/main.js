@@ -61,5 +61,32 @@ routes.post('/register', async (req, res) => {
         res.status(500).send(`Error registering user: ${error.message}`);
     }
   });
+  routes.post('/login', async (req,res)=>{
+    try{
+        const email = req.body.email;
+        const password = req.body.password;
+        const useremail = await Register.findOne({email:email})
+        if(useremail.password === password){
+            const details = await Detail.findOne({"_id":"646bafa2c087c0d9d56028b9"})
+            const slider = await Slider.find()
+            const products = await Product.find()
+            const featurebox = await FeatureBox.find()
+            const feateredcategories = await FeaturedCategories.find()
+            res.status(201).render("index",{
+                details:details,
+                slides:slider,
+                products:products,
+                featurebox:featurebox,
+                featuredcategories:feateredcategories,
+            });
+        }
+        else{
+            res.send("invalid email or password")
+        }
+    }
+    catch{
+        res.send("invalid email or password")
+    }
+  })
 
 module.exports = routes
