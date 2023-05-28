@@ -6,6 +6,17 @@
     box-sizing: border-box;
     font-family: 'Mulish', sans-serif;
 }
+.container-fluids
+{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("CART.jpg");
+        background-size: cover;
+        background-position: center center;
+}
 :root{
     --text-clr: #4f4f4f;
 }
@@ -21,11 +32,30 @@ p{
     color: var(--text-clr);
 }
 .h2_cl{
-    color: var(--text-clr);
+    color: green;
     font-size: 1.5rem;
 }
 .main_cart{
-    background: #fff;
+    background: #fffbef;
+    opacity: 0.9;
+}
+.right_side{
+    background: #fffbef;
+    opacity: 0.9;
+}
+.e_d{
+    background: #fffbef;
+    opacity: 0.9;
+}
+.card{
+    background: #fffbef !important;
+    opacity: 0.9;
+}
+.code_text::placeholder{
+    color: green !important;
+}
+.code_text{
+    color: red !important;
 }
 .card_cl{
     border: none;
@@ -40,6 +70,12 @@ p{
     text-transform: capitalize;
     font-weight: 500;
 }
+.product_name_h2{
+    color: green;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 500;
+}
 .card-title p{
     font-size: 0.9rem;
     font-weight: 500;
@@ -47,6 +83,7 @@ p{
 .remove_wish p {
     font-size: 0.8rem;
     margin-bottom: 0;
+    cursor: pointer;
 }
 .price_money h3 {
     font-size: 1rem;
@@ -69,13 +106,14 @@ p{
     line-height: 16px;
     width: 45px;
     font-size: 1rem;
+    padding: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #495057;
 }
 .page-item-li input{
-    line-height: 17px;
+    line-height: 22px;
     padding: 3px;
     font-size: 15px;
     display: flex;
@@ -94,8 +132,19 @@ p{
 .price_indiv p {
     font-size: 1.1rem;
 }
+.fa-heart{
+    color: green;
+}
 .fa-heart:hover{
     color: red;
 }
-
-
+.fa-trash-alt{
+    color: green;
+}
+.fa-trash-alt:hover{
+    color: red;
+}
+.btn-success:hover{
+    background-color: #d70101 !important;
+    border-color: #d70101 !important;
+}
