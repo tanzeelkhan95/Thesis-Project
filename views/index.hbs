@@ -85,9 +85,15 @@
             <button type="button" class="btn btn-secondary" title="ADD TO WISHLIST">
               <i class="fa fa-heart-o"></i>
             </button>
-            <button type="button" class="btn btn-secondary" title="ADD TO CART">
+            <form action="/add-to-cart" method="POST">
+               <input type="hidden" name="productid" value="{{this._id}}">
+               <input type="hidden" name="name" value="{{this.productName}}">
+               <input type="hidden" name="price" value="{{this.price}}">
+               <input type="hidden" name="img" value="{{this.imageName}}">
+            <button type="submit" class="btn btn-secondary" title="ADD TO CART">
               <i class="fa fa-shopping-cart"></i>
             </button>
+            </form>
           </div>
         </div>
         <div class="product-bottom text-center">

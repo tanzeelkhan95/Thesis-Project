@@ -16,6 +16,10 @@ app.use(express.urlencoded({ extended:false }))
 app.use('/static', express.static("public"))
 app.use('',routes)
 
+//cart route
+const cart_route = require("./routes/cartRoute")
+app.use('',cart_route)
+
 //(template engine)
 
 app.set('view engine', 'hbs')

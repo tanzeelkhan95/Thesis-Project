@@ -8,6 +8,7 @@ const Product = require('../models/Product')
 const FeatureBox = require('../models/FeatureBox')
 const FeaturedCategories = require('../models/FeaturedCategories')
 const Register = require('../models/User')
+const Cart = require("../models/Cart")
 
 const routes = express.Router()
 
@@ -36,8 +37,10 @@ routes.get('/product', async(req,res)=>{
 
 routes.get('/cart', async(req,res)=>{
     const details = await Detail.findOne({"_id":"646bafa2c087c0d9d56028b9"})
+    const cart = await Cart.find()
     res.render("cart",{
-        details:details
+        details:details,
+        cart:cart
     })
 })
 
