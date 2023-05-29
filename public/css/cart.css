@@ -110,7 +110,8 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #495057;
+    background-color: #fffbef;
+    color: green;
 }
 .page-item-li input{
     line-height: 22px;
@@ -123,7 +124,7 @@ p{
 }
 .page_link:hover{
     text-decoration: none;
-    color: #495057;
+    color: red;
     outline: none !important;
 }
 .page_link:focus{
