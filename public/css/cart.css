@@ -56,6 +56,9 @@ p{
     background-color: transparent;
     border: none;
 }
+.remove-btn:hover{
+    color: red;
+}
 .code_text::placeholder{
     color: green !important;
 }
