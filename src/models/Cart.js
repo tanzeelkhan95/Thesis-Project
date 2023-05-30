@@ -1,7 +1,6 @@
 const mongoose = require("mongoose")
 
 const Cart = mongoose.Schema({
-    quantity:String,
     productid:
     {
         type:String,

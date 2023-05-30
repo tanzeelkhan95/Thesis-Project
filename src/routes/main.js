@@ -38,9 +38,11 @@ routes.get('/product', async(req,res)=>{
 routes.get('/cart', async(req,res)=>{
     const details = await Detail.findOne({"_id":"646bafa2c087c0d9d56028b9"})
     const cart = await Cart.find()
+    const cartlength = cart.length;
     res.render("cart",{
         details:details,
-        cart:cart
+        cart:cart,
+        cartlength:cartlength
     })
 })
 

@@ -2,14 +2,13 @@ const Cart = require("../models/Cart")
 
 const add_to_cart = async(req,res)=>{
         try {
-            const { productid, img, name, price, quantity } = req.body;
+            const { productid, img, name, price } = req.body;
         
             const cart_obj = new Cart({
               productid: productid,
               img: img,
               name: name,
               price: price,
-              quantity: 0,
             });
 
             const cartData = await cart_obj.save();
@@ -22,6 +21,13 @@ const add_to_cart = async(req,res)=>{
 
 }
 
+const delete_cart_item = async (req,res) => {
+    const productId = req.body.productId;
+    const cartItem = await Cart.findById(productId);
+    await cartItem.remove();
+    res.redirect("/cart")
+}
 module.exports = {
-    add_to_cart
+    add_to_cart,
+    delete_cart_item,
 }
