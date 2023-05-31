@@ -1,5 +1,25 @@
 const Cart = require("../models/Cart")
 const CartCred = require("../models/cartData")
+const UserCred = require("../models/userData")
+
+const user_details = async(req,res) =>{
+    try {
+        const { fullname, phone, address, postalcode, city, country } = req.body
+
+        const usercred_obj = new UserCred({
+            fullname:fullname,
+            phone:phone,
+            address:address,
+            postalcode:postalcode,
+            city:city,
+            country:country
+        })
+        const usercredData = await usercred_obj.save()
+        res.status(200).send('success')
+    } catch (error) {
+        res.status(400).send({ success:false, msg:error.message })
+    }
+}
 
 const cart_details = async(req,res) =>{
     try {
@@ -47,5 +67,6 @@ const delete_cart_item = async (req,res) => {
 module.exports = {
     add_to_cart,
     delete_cart_item,
-    cart_details
+    cart_details,
+    user_details
 }
