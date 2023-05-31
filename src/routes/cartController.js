@@ -15,7 +15,7 @@ const user_details = async(req,res) =>{
             country:country
         })
         const usercredData = await usercred_obj.save()
-        res.status(200).send('success')
+        res.status(200).redirect('/payment')
     } catch (error) {
         res.status(400).send({ success:false, msg:error.message })
     }

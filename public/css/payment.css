@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Poppins:wght@500&display=swap');
+
+:root{
+    --third-color:#fff;
+    --four-color:#000;
+    --bodyfont: 'Mulish', sans-serif;
+    --normal-font-size:1rem;
+}
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: var(--bodyfont);
+    background-image: url("CART.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    padding: 50px 0;
+}
+.card{
+    background-color: #fffbef !important;
+    opacity: 0.9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 300px;
+    border-radius: 29px !important;
+}
+.pay{
+    font-size: 18px;
+    color: green;
+    font-weight: 600;
+    margin-top: 5px;
+}
+.amount{
+    background-color: #fffbef;
+    border-radius: 8px;
+}
+.inner{
+    padding: 8px 19px;
+}
+.dollar{
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+.total{
+    font-size: 20px;
+    font-weight: 500;
+    color: black
+}
+.labeltxt{
+    font-size: 13px;
+    color:green;
+    font-weight: 500;
+    margin-top: 5px;
+}
+.image{
+    position: relative;
+    top: 46px;
+    right: 13px;
+}
+.form-control:focus{
+    box-shadow: none;
+}
+.inputtxt{
+    color: var(--four-color) !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    padding: 15px 15px !important;
+    border: 2px solid green !important;
+    border-radius: 7px !important;
+}
+.exptxt{
+    color: green;
+    font-size: 13px;
+    font-weight: 500;
+}
+.cvvtxt{
+    color: green;
+    font-size: 13px;
+    font-weight: 500;
+}
+.expiry{
+    padding: 15px 15px !important;
+    width: 120px !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    border: 2px solid green !important;
+    border-radius: 7px !important;
+}
+.cvv{
+    padding: 13.5px 15px !important;
+    width: 120px !important;
+    border: 2px solid green !important;
+    border-radius: 7px !important;
+}
+.cancel:hover,
+.cancel:focus{
+    box-shadow: none !important;
+    background-color: #AA0000 !important;
+}
+.payment{
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    border: none !important;
+    width: 150px !important;
+    color: var(--third-color) !important;
+    padding: 9.5px 10px !important;
+    border-radius: 11px !important;
+    cursor: pointer;
+}
+.payment:hover{
+    background-color: #AA0000 !important;
+}
