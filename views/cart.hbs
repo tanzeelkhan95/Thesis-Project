@@ -10,7 +10,7 @@
         <!-- Font Awesome CDN -->
         <script src="https://kit.fontawesome.com/d7fc6ade47.js" crossorigin="anonymous"></script>
         <title>CART PAGE</title>
-        <link rel="icon" type="image/png" href="/static/images/LOGO.png">
+        <link rel="icon" type="image/png" href="{{details.brandIconUrl}}">
       </head>
       <body>
        <form action="/cartdata" method="post" id="cartdataform">
@@ -179,7 +179,7 @@
                 total_cart_amt.innerHTML = 0;
               }else{
                 total_cart_amt.innerHTML = parseInt(product_total_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
-                totalCartCostInput.value = parseInt(totalCartCostInput.innerHTML);
+                totalCartCostInput.value = parseInt(total_cart_amt.innerHTML);
               }
             }
           }
@@ -211,6 +211,7 @@
               if(total_curr_amt >= 30){
                 let new_cart_amt = total_curr_amt - 25;
                 total_cart_amt.innerHTML = new_cart_amt;
+                totalCartCostInput.value = parseInt(total_cart_amt.innerHTML);
                 error_trw.innerHTML = "Yaaayy! Code Applied"
               }else{
                 error_trw.innerHTML = "Amount should be atleast $20"

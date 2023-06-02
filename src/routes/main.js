@@ -28,6 +28,13 @@ routes.get("/", async (req,res) => {
     })
 })
 
+routes.get('/thankyou', async(req,res)=>{
+    const details = await Detail.findOne({"_id":"646bafa2c087c0d9d56028b9"})
+    res.render("thankyou",{
+        details:details
+    })
+})
+
 routes.get('/usercred', async(req,res)=>{
     const details = await Detail.findOne({"_id":"646bafa2c087c0d9d56028b9"})
     res.render("userdetails",{
@@ -44,8 +51,10 @@ routes.get('/payment', async(req,res)=>{
 
 routes.get('/product', async(req,res)=>{
     const details = await Detail.findOne({"_id":"646bafa2c087c0d9d56028b9"})
+    const products = await Product.find()
     res.render("product", {
-        details:details
+        details:details,
+        products:products
     })
 })
 

@@ -10,6 +10,21 @@
         <!-- Font Awesome CDN -->
         <script src="https://kit.fontawesome.com/d7fc6ade47.js" crossorigin="anonymous"></script>
         <title>PAYMENT PAGE</title>
+        <link rel="icon" type="image/png" href="{{details.brandIconUrl}}">
+        <script>
+       function validateForm() {
+         var cardNumber = document.getElementsByName("number")[0].value;
+         var expiry = document.getElementsByName("expiry")[0].value;
+         var cvv = document.getElementsByName("cvv")[0].value;
+
+        if (cardNumber === "" || expiry === "" || cvv === "") {
+          alert("Please fill in all the required fields.");
+          return false;
+        }else{
+            window.location.href='/thankyou';
+        }
+      }
+      </script>
         </head>
         <body>
         <div class="container mt-4 d-flex justify-content-center main">
@@ -33,19 +48,21 @@
                 <div class="d-flex justify-content-between px-3 pt-4">
                     <div>
                         <label for="date" class="exptxt">EXPIRY</label>
-                        <input type="number" name="number" class="form-control expiry" placeholder="MM / YY">
+                        <input type="number" name="expiry" class="form-control expiry" placeholder="MM / YY">
                     </div>
                     <div>
                         <label for="cvv" class="cvvtxt">CVV /CVC</label>
-                        <input type="number" name="number" class="form-control cvv" placeholder="123">
+                        <input type="number" name="cvv" class="form-control cvv" placeholder="123">
                     </div>
                 </div>
                 <div class="d-flex align-content-center justify-content-between px-3 py-4">
                     <div>
-                        <button type="button" class="btn btn-success cancel">CANCEL</button>
+                        {{#with details.links.[0]}}
+                        <button type="button" class="btn btn-success cancel" onclick="window.location.href='{{this.url}}';">CANCEL</button>
+                        {{/with}}
                     </div>
                     <div>
-                        <button type="button" class="btn btn-success payment">MAKE PAYMENT</button>
+                        <button type="button" class="btn btn-success payment" onclick = validateForm()>MAKE PAYMENT</button>
                     </div>
                 </div>
             </div>

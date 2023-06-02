@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("CART.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+.Container1{
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fffbef;
+    opacity: 0.9;
+    box-shadow: 0 15px 20px black;
+
+}
+h1{
+    font-size: 50px;
+    font-weight: bold !important;
+    text-align: center;
+    color: green !important;
+    padding-bottom: 8px;
+    border-bottom: 1px solid green;
+}
+p{
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 25px;
+}
+.button-container{
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0; 
+}
+.button-container button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    border: none;
+}
+
+.btn-success:hover{
+    background-color: red !important;
+}

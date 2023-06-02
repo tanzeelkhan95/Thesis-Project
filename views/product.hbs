@@ -9,10 +9,52 @@
         <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/d7fc6ade47.js" crossorigin="anonymous"></script>
         <title>Product Page</title>
+        <link rel="icon" type="image/png" href="{{details.brandIconUrl}}">
       </head>
       <body>
         {{>navbar data=details}}
-        <h1>PRODUCT PAGE</h1>
+        <section class="on-sale">
+           <div class="container">
+            <div class="title-box">
+            <h2>PRODUCTS</h2>
+            </div>
+              <div class="row">
+              {{#each products}}
+              <div class="col-md-3">
+                <div class="product-top">
+                 <img src="{{this.imageName}}">
+                 <div class="overlay-right">
+                   <button type="button" class="btn btn-secondary" title="QUICK SHOP">
+                 <i class="fa fa-eye"></i>
+                 </button>
+                 <button type="button" class="btn btn-secondary" title="ADD TO WISHLIST">
+                 <i class="fa fa-heart-o"></i>
+                 </button>
+                 <form action="/add-to-cart" method="POST">
+                 <input type="hidden" name="productid" value="{{this._id}}">
+                 <input type="hidden" name="name" value="{{this.productName}}">
+                 <input type="hidden" name="price" value="{{this.price}}">
+                 <input type="hidden" name="img" value="{{this.imageName}}">
+                 <button type="submit" class="btn btn-secondary" title="ADD TO CART">
+                  <i class="fa fa-shopping-cart"></i>
+                </button>
+               </form>
+             </div>
+            </div>
+          <div class="product-bottom text-center">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <h3>{{this.productName}}</h3>
+            <h5>{{this.price}}</h5>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
 
 
 
